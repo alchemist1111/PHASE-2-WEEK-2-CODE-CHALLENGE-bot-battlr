@@ -12,7 +12,7 @@ const BotPage = () => {
   const [filter, setFilter] = useState('All');
 
   useEffect(() => {
-    fetch('http://localhost:3000/bots')
+    fetch('https://json-server-5-zmha.onrender.com/bots')
       .then(res => res.json())
       .then(bots => setAllBots(bots.map(bot => ({ ...bot, owned: false }))));
   }, []);
